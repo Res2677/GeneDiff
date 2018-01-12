@@ -1,0 +1,2 @@
+shell cyc:
+for i in `ls`;do for j in `awk '{print $1}' /public/home/hangjf/data/database/bwa_index/human/hg19.fasta.fai|grep -v '_'`;do echo "samtools view -b /public/home/hangjf/cancer-changhai/process12.27/GATK/"$i"/"$i".C.sort.group.dup.bam "$j" > /public/home/hangjf/cancer-changhai/process12.27/GATK/"$i"/chr/"$i".C.sort.group.dup."$j".bam" > /public/home/hangjf/cancer-changhai/process12.27/GATK/$i/sh/$j.split.sh; done; done
